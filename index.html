@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Birthday Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="bgm" loop preload="auto">
+        <source src="assets/bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicToggle" class="music-toggle" hidden>
+        Music: OFF
+    </button>
+
+    <main id="app">
+
+        
+<section id="welcome" class="screen active">
+    <div class="lock-illustration">
+        <div class="lock-shackle"></div>
+        <div class="lock-body">
+            <span class="lock-heart">♥</span>
+        </div>
+    </div>
+
+    <h1>Unlock My Heart</h1>
+    <p>Enter the secret passcode</p>
+
+    <div id="pinDots" class="pin-dots">
+        <span></span><span></span><span></span><span></span>
+    </div>
+
+    <div id="keypad" class="keypad">
+        <button type="button" data-digit="1">1</button>
+        <button type="button" data-digit="2">2</button>
+        <button type="button" data-digit="3">3</button>
+        <button type="button" data-digit="4">4</button>
+        <button type="button" data-digit="5">5</button>
+        <button type="button" data-digit="6">6</button>
+        <button type="button" data-digit="7">7</button>
+        <button type="button" data-digit="8">8</button>
+        <button type="button" data-digit="9">9</button>
+        <button type="button" data-action="clear">C</button>
+        <button type="button" data-digit="0">0</button>
+        <button type="button" data-action="delete">⌫</button>
+    </div>
+
+    <p id="passcodeMessage" aria-live="polite"></p>
+</section>
+
+
+        <!-- Screen 2: Birthday Yes/No -->
+        <section id="birthdayQuestion" class="screen">
+            <div class="heart-lock">♥</div>
+            <h1>Happy Birthday!</h1>
+            <p>I have a little surprise prepared just for you.</p>
+            <h2>Are you ready for your surprise?</h2>
+
+            <div class="button-group">
+                <button id="yesButton">Yes!</button>
+                <button id="noButton" class="secondary-button">No</button>
+            </div>
+
+            <p id="questionMessage" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
